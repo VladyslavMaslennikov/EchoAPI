@@ -12,7 +12,6 @@ import RxCocoa
 class ResultsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private let disposeBag = DisposeBag()
     
     var credentials: UserCredentials?
     private var viewModel: ResultsViewModel?
@@ -21,6 +20,7 @@ class ResultsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupController()
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,14 +54,17 @@ class ResultsController: UIViewController {
     
     private func setupController() {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        tableView.tableFooterView = UIView()
-        tableView.estimatedRowHeight = UITableView.automaticDimension
-        tableView.allowsSelection = false
         if let credentials = credentials {
             viewModel = ResultsViewModel(token: credentials.token)
         } else {
             dismissController()
         }
+    }
+    
+    private func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.allowsSelection = false
         viewModel?.bindTableView(tableView)
     }
 }
