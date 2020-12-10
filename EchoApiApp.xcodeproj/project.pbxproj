@@ -90,7 +90,6 @@
 				87292F5A257FDC6D0097A16F /* App */,
 				87292F6625801E830097A16F /* Auth Scene */,
 				87855E5D25810D2B003C6C9E /* Results Scene */,
-				879F34042581AE6E00CD7050 /* ResultsCell */,
 				87292F7025801F730097A16F /* APIService */,
 				87855E6225810D9D003C6C9E /* Managers */,
 				87292F5C257FDC910097A16F /* Resources */,
@@ -177,6 +176,7 @@
 			children = (
 				87855E5E25810D5B003C6C9E /* Controller */,
 				87855E6D25819F4D003C6C9E /* ViewModel */,
+				879F34042581AE6E00CD7050 /* ResultsCell */,
 			);
 			path = "Results Scene";
 			sourceTree = "<group>";
@@ -211,7 +211,8 @@
 			children = (
 				879F34052581AE8800CD7050 /* ResultsCell.swift */,
 			);
-			path = ResultsCell;
+			name = ResultsCell;
+			path = ../ResultsCell;
 			sourceTree = "<group>";
 		};
 		DE0A6AE77ED890283EA95DDF /* Frameworks */ = {
